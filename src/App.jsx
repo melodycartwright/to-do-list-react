@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
-import './App.css'
+import {useState} from 'react';
+import './App.css';
 import Todo from './components/Todo';
+import TodoForm from './components/TodoForm';
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -22,7 +24,7 @@ const removeTodo = (index) => {
   return (
     <div className='App'>
 <h1>Todo List</h1>
-<TodoForm addTodo={addTodo}/>
+<TodoForm addTodo={addTodo} />
 <div className="todo-list">
 
 {todos.map((todo, index) => ( 
@@ -32,13 +34,12 @@ key={index}
 index={index}
 todo={todo}
 completeTodo={completeTodo}
-removeTodo={removeTodo} />
-) )}
+removeTodo={removeTodo} 
+/>
+))}
 </div>
-    </div>
-     
-  
-  );
+</div>
+ );
 }
 
 export default App;
