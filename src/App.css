@@ -1,50 +1,112 @@
 .App {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20 px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
   color: #333;
+  margin-bottom: 20px;
 }
 
-.todo {
-  background: #f9f9f9;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+.todo-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  margin-top: 20px;
-
-
+  margin-bottom: 20px;
 }
 
 input.input {
   flex-grow: 1;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px 0 0 4px;
+  font-size: 16px;
 }
 
 button {
   background: #0066ff;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.todo button {
-  margin-left: 5px;
-  padding: 5px 10px;
+button:hover {
+  background: #0052cc;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todo:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.todo.completed {
+  background-color: #f0f0f0;
+  opacity: 0.8;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.todo-actions button {
+  margin-left: 5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.complete-btn {
+  background-color: #4caf50;
+}
+
+.complete-btn:hover {
+  background-color: #3e8e41;
+}
+
+.undo-btn {
+  background-color: #ff9800;
+}
+
+.undo-btn:hover {
+  background-color: #e68a00;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.debug {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
 }
